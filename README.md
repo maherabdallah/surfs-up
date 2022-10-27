@@ -2,45 +2,31 @@
 
 ## Project Overview
 
-W. Avy, an investor that we reached out to, is inquirying about a weather analysis in Oahu, Hawaii where we plan to open our surf and ice cream shop. We
-
-
-
-Independent Funding is a crowdfunding platform aimed to raise funding for independent projects or ventures. Britta, a junior SQL developer for the company, seeks our assistance in migrating all of Independent Funding's accessible data from one large Excel file onto a PostgreSQL database.
-
-We've been tasked with the following:
-
-- Extracting and transforming the data from the large Excel file into four separate CSV files
-- Creating a PostgreSQL database and tables by using an ERD
-- Loading the CSV files into the database
-- Performing SQL queries to generate reports for stakeholders
+W. Avy, an investor that we reached out to, is inquirying about a weather analysis for Oahu, Hawaii where we plan to open our surf and ice cream shop. A surf and ice cream shop relies heavily on nice, warm weather to ensure the business is successful. Using Python, Pandas functions and methods, and SQLAlchemy, we generated a list of all measured temperature data for the months of June and December. Using our lists and converting them to dataframes, we determined the summary statistics, as requested by W. Avy.
 
 <br>
 
-## Overview of Deliverables
-We created four different CSV files (campaign, category, subcategory, contacts) from a crowdfunding Excel file and uploaded the files into separate tables in a SQL database.
-
-We used regular expressions to clean the data and extract information into multiple columns
-![Independent Funding - Regex](./Images_for_README/Regex.png)
-
+## Results
+With our June and December summary data generated, we found several key differences:
 <br>
-Next, we created 2 new columns (first_name and last_name) to divide the 'name' column and drop it
+1. We had slightly more weather data for the month of June compared to December, 1700 observations verse 1517.
 
-![Independent Funding - First and Last names](./Images_for_README/name.png)
+2. The minimum temperatures were less than 10 degrees apart from each other. The minimum temperature for June was 64 and 56 in December
 
-<br>
-In the 3rd deliverable, we created a crowdfunding relationship diagram to map our database structure before creating our tables nad importing data into PgAdmin.
+3. The maximum temperatures were very close despite the season and time of year. In June, temperatures reached 85 degrees and in December they reached 83 degrees.
+<br><br>
 
-![Independent Funding - ERD](./crowdfunding_db_relationships.png)
+![Surf's Up with Advanced Data Storage and Retrieval - June](./Images/June_summary.png) 
+![Surf's Up with Advanced Data Storage and Retrieval - December](./Images/December_summary.png)
 
-<br>
-
-Lastly, we created 2 new queries to find the remaining goal amount for all live projects based on the contacts table and the remaining campaign goal amount from the backers table on all crowdfunding campaigns.
-![Independent Funding - Bonus](./Images_for_README/bonus.png)
 <br>
 
 ## Summary & Conclusion
 
-For deliverable 4 (bonus), we determined there were 14 live campaigns with a remaining goal amount.
+Although our weather analysis was focused on June and December, opposite months in two different seasons, the temperatures were close together. The lowest temperature was 56 degrees which may forsee less customers than in warmer conditions. However, in 56 degree weather, we can still see customers stop by. Oahu would be a great location to open shop according to our analysis.
 
-All data was successfully extracted, transformed, and loaded onto a PostgreSQL database. The data was split into all required columns and the Entity Relationship Diagram provided a helpful overview to stay on path and provide accurate constraints for primary and foregin keys in PostgreSQL.
+Some additional queries we may perform to solidify our decision and to minimize any doubt W. Avy has with his investment is to run analysis on other months of the year, to include November and January, as well as May and July. January may, in some years, be colder than December so it would be best practice to look at the bordering months' weather data.
+
+Another query we can look into is to determine day/night weather data to help optimize our hours of operations.
+
+Lastly, we can look at precipitation data to determine which months are likely to rain out any surfing in the area, leading to decreased foot traffic and customers to our shop.
