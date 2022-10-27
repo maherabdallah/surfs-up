@@ -5,9 +5,8 @@
 W. Avy, an investor that we reached out to, is inquirying about a weather analysis for Oahu, Hawaii where we plan to open our surf and ice cream shop. A surf and ice cream shop relies heavily on nice, warm weather to ensure the business is successful. Using Python, Pandas functions and methods, and SQLAlchemy, we generated a list of all measured temperature data for the months of June and December. Using our lists and converting them to dataframes, we determined the summary statistics, as requested by W. Avy.
 
 <br>
-
 ## Results
-With our June and December summary data generated, we found several key differences:
+With our June and December summaries generated, we found several key differences:
 <br>
 1. We had slightly more weather data for the month of June compared to December, 1700 observations verse 1517.
 
@@ -20,7 +19,6 @@ With our June and December summary data generated, we found several key differen
 ![Surf's Up with Advanced Data Storage and Retrieval - December](./Images/December_summary.png)
 
 <br>
-
 ## Summary & Conclusion
 
 Although our weather analysis was focused on June and December, opposite months in two different seasons, the temperatures were close together. The lowest temperature was 56 degrees which may forsee less customers than in warmer conditions. However, in 56 degree weather, we can still see customers stop by. Oahu would be a great location to open shop according to our analysis.
